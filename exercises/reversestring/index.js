@@ -30,8 +30,11 @@ function reverse(str) {
     // Using the reduce helper method
     // convert the given str into an array, use the reduce helper method
     // return the result
+    debugger;
     return str.split("").reduce((rev, char) => char + rev, "");
 
 }
+
+reverse("asdf");
 
 module.exports = reverse;
