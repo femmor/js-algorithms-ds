@@ -13,16 +13,25 @@ function reverse(str) {
     // // join the array back into a str with the join method
     // return str.split("").reverse().join("");
 
-    // Solution 2
-    // Using forOf loop
-    // create a new empty string
-    let reversed = ""
-    // for each char in the the given str, add the char to the empty reversed string
-    for (const char of str) {
-        reversed = char + reversed
-    }
-    // return the reversed string
-    return reversed
+
+    // // Solution 2 - Seems to take longer
+    // // Using forOf loop
+    // // create a new empty string
+    // let reversed = ""
+    // // for each char in the the given str, add the char to the empty reversed string
+    // for (const char of str) {
+    //     reversed = char + reversed
+    // }
+    // // return the reversed string
+    // return reversed
+
+
+    // Solution 3
+    // Using the reduce helper method
+    // convert the given str into an array, use the reduce helper method
+    // return the result
+    return str.split("").reduce((rev, char) => char + rev, "");
+
 }
 
 module.exports = reverse;
